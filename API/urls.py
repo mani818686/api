@@ -23,7 +23,7 @@ urlpatterns = [
     path('viewset/',include(router.urls)),
     path('viewset/<int:pk>/',include(router.urls)),
     path('admin/', admin.site.urls),
-    path('articles',views.article_list,name='list'),
+    path('',views.article_list,name='list'),
     path('api/articles',views.ArticleAPIView.as_view(),name='listapi'),
     path("api/articles/<int:pk>",views.ArticleDetail.as_view(), name="detailsapi"),
     path("detail/<int:pk>",views.article_detail, name="details"),
